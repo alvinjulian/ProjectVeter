@@ -1,9 +1,16 @@
-﻿Public Class frm_Login
+﻿Imports System.Text.RegularExpressions
+
+Public Class frm_Login
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Login"
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.txtPassword.PasswordChar = "*"
+    End Sub
+
+    Public Sub loginDetails()
+        Dim details As String
+        details = "admin admin"
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnExit.Click
