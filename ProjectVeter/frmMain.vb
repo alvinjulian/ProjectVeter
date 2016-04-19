@@ -1,5 +1,5 @@
 ﻿Public Class frmMain
-    Public Shared waktu As Integer = 90 'untuk bisa diload ke form lain'
+    Public Shared waktu As Integer = 90 'set waktu disini' 'untuk bisa diload ke form lain'
 
     Public Sub New(ByVal sTitle As String)
 
@@ -44,8 +44,31 @@
         Else
 
             tmr_login.Stop()
-            'masuk ke frm_Login'
+
+            'close all form'
+            Dim sukses_exit As Boolean
+            Do
+                sukses_exit = True
+                Try
+                    For Each f As Form In My.Application.OpenForms
+                        If f.Name < "frmMain" Then f.Close()
+                    Next f
+                Catch ex As Exception
+                    sukses_exit = False
+                End Try
+            Loop Until sukses_exit
+
+            Dim frm_login As New frm_Login
+            frm_login.Show()
+            waktu = 90
+            Me.Close()
 
         End If
+    End Sub
+
+    Private Sub KasirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KasirToolStripMenuItem.Click
+        Dim frm_Kasir As New frm_Kasir
+        frm_Kasir.Show()
+        Me.Hide()
     End Sub
 End Class
