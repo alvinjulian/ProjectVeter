@@ -31,9 +31,7 @@
         Dim menit As Integer
         Dim detik As Integer
 
-
         detik = waktu Mod 60
-
 
         menit = ((waktu - detik) / 60) Mod 60
 
@@ -49,6 +47,5 @@
             'masuk ke frm_Login'
 
         End If
-
     End Sub
 End Class
