@@ -29,7 +29,6 @@ Partial Class frmMain
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GudangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Lbl1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tlstriplbl_timer = New System.Windows.Forms.ToolStripStatusLabel()
         Me.strp_login = New System.Windows.Forms.ToolStripStatusLabel()
@@ -78,16 +77,6 @@ Partial Class frmMain
         Me.GudangToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.GudangToolStripMenuItem.Text = "&Gudang"
         '
-        'Lbl1
-        '
-        Me.Lbl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl1.Location = New System.Drawing.Point(159, 39)
-        Me.Lbl1.Name = "Lbl1"
-        Me.Lbl1.Size = New System.Drawing.Size(177, 60)
-        Me.Lbl1.TabIndex = 1
-        Me.Lbl1.Text = "TOKO J"
-        Me.Lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tlstriplbl_timer, Me.strp_login})
@@ -120,7 +109,6 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(631, 425)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.Lbl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -138,7 +126,6 @@ Partial Class frmMain
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProfilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Lbl1 As Label
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents tlstriplbl_timer As ToolStripStatusLabel
     Friend WithEvents KasirToolStripMenuItem As ToolStripMenuItem

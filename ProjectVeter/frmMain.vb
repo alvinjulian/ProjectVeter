@@ -1,6 +1,8 @@
 ﻿Public Class frmMain
     Public Shared waktu As Integer = 90 'set waktu disini' 'untuk bisa diload ke form lain'
 
+    Public Shared buka As Boolean = False
+
     Public Sub New(ByVal sTitle As String)
 
         ' This call is required by the designer.
@@ -9,6 +11,7 @@
         ' Add any initialization after the InitializeComponent() call.
         strp_login.Text = "Logged in as " + sTitle
 
+        Me.IsMdiContainer = True
     End Sub
 
     Private Sub frmMain_Load() Handles MyBase.Load
@@ -68,7 +71,25 @@
 
     Private Sub KasirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KasirToolStripMenuItem.Click
         Dim frm_Kasir As New frm_Kasir
+        frm_Kasir.MdiParent = Me
         frm_Kasir.Show()
+    End Sub
+
+    Private Sub frmMain_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Me.Hide()
+        'buka = True
+        'If (buka = True) Then
+        Dim frmLogin = New frm_Login
+        '  buka = False
+        frmLogin.Show()
+
+        '    frmLogin = Nothing
+        '    Me.Close()
+        'End If
+        'Application.Run(New frm_Login)
     End Sub
 End Class

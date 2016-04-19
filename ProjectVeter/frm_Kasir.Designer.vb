@@ -25,18 +25,18 @@ Partial Class frm_Kasir
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Txt3 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Cmbox1 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Txt2 = New System.Windows.Forms.TextBox()
         Me.Txt1 = New System.Windows.Forms.TextBox()
-        Me.Cmbox1 = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Cbox2 = New System.Windows.Forms.ComboBox()
+        Me.Txt4 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Txt4 = New System.Windows.Forms.TextBox()
-        Me.Cbox2 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Btn2 = New System.Windows.Forms.Button()
         Me.Btn3 = New System.Windows.Forms.Button()
@@ -78,6 +78,32 @@ Partial Class frm_Kasir
         Me.Txt3.Size = New System.Drawing.Size(100, 20)
         Me.Txt3.TabIndex = 17
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(628, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(77, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Jumlah Barang"
+        '
+        'Cmbox1
+        '
+        Me.Cmbox1.FormattingEnabled = True
+        Me.Cmbox1.Location = New System.Drawing.Point(18, 47)
+        Me.Cmbox1.Name = "Cmbox1"
+        Me.Cmbox1.Size = New System.Drawing.Size(121, 21)
+        Me.Cmbox1.TabIndex = 14
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(507, 18)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(36, 13)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Harga"
+        '
         'Txt2
         '
         Me.Txt2.Location = New System.Drawing.Point(501, 48)
@@ -94,31 +120,14 @@ Partial Class frm_Kasir
         Me.Txt1.Size = New System.Drawing.Size(318, 20)
         Me.Txt1.TabIndex = 15
         '
-        'Cmbox1
+        'Label2
         '
-        Me.Cmbox1.FormattingEnabled = True
-        Me.Cmbox1.Location = New System.Drawing.Point(18, 47)
-        Me.Cmbox1.Name = "Cmbox1"
-        Me.Cmbox1.Size = New System.Drawing.Size(121, 21)
-        Me.Cmbox1.TabIndex = 14
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(628, 16)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(77, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Jumlah Barang"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(507, 18)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 13)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Harga"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(15, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 13)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Barcode"
         '
         'Label3
         '
@@ -128,15 +137,6 @@ Partial Class frm_Kasir
         Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nama Barang"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 13)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Barcode"
         '
         'GroupBox2
         '
@@ -150,6 +150,21 @@ Partial Class frm_Kasir
         Me.GroupBox2.TabIndex = 18
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Barang"
+        '
+        'Cbox2
+        '
+        Me.Cbox2.FormattingEnabled = True
+        Me.Cbox2.Location = New System.Drawing.Point(118, 91)
+        Me.Cbox2.Name = "Cbox2"
+        Me.Cbox2.Size = New System.Drawing.Size(100, 21)
+        Me.Cbox2.TabIndex = 19
+        '
+        'Txt4
+        '
+        Me.Txt4.Location = New System.Drawing.Point(118, 48)
+        Me.Txt4.Name = "Txt4"
+        Me.Txt4.Size = New System.Drawing.Size(100, 20)
+        Me.Txt4.TabIndex = 18
         '
         'Label7
         '
@@ -168,21 +183,6 @@ Partial Class frm_Kasir
         Me.Label8.Size = New System.Drawing.Size(66, 13)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "Pembayaran"
-        '
-        'Txt4
-        '
-        Me.Txt4.Location = New System.Drawing.Point(118, 48)
-        Me.Txt4.Name = "Txt4"
-        Me.Txt4.Size = New System.Drawing.Size(100, 20)
-        Me.Txt4.TabIndex = 18
-        '
-        'Cbox2
-        '
-        Me.Cbox2.FormattingEnabled = True
-        Me.Cbox2.Location = New System.Drawing.Point(118, 91)
-        Me.Cbox2.Name = "Cbox2"
-        Me.Cbox2.Size = New System.Drawing.Size(100, 21)
-        Me.Cbox2.TabIndex = 19
         '
         'Button1
         '
