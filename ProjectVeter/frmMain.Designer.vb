@@ -27,12 +27,12 @@ Partial Class frmMain
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProfilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GudangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Lbl1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tlstriplbl_timer = New System.Windows.Forms.ToolStripStatusLabel()
         Me.strp_login = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.KasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GudangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tmr_login = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -57,14 +57,26 @@ Partial Class frmMain
         'ProfilToolStripMenuItem
         '
         Me.ProfilToolStripMenuItem.Name = "ProfilToolStripMenuItem"
-        Me.ProfilToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProfilToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.ProfilToolStripMenuItem.Text = "Profil"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.ExitToolStripMenuItem.Text = "Logout"
+        '
+        'KasirToolStripMenuItem
+        '
+        Me.KasirToolStripMenuItem.Name = "KasirToolStripMenuItem"
+        Me.KasirToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.KasirToolStripMenuItem.Text = "&Kasir"
+        '
+        'GudangToolStripMenuItem
+        '
+        Me.GudangToolStripMenuItem.Name = "GudangToolStripMenuItem"
+        Me.GudangToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.GudangToolStripMenuItem.Text = "&Gudang"
         '
         'Lbl1
         '
@@ -98,17 +110,9 @@ Partial Class frmMain
         Me.strp_login.Size = New System.Drawing.Size(120, 17)
         Me.strp_login.Text = "ToolStripStatusLabel1"
         '
-        'KasirToolStripMenuItem
+        'tmr_login
         '
-        Me.KasirToolStripMenuItem.Name = "KasirToolStripMenuItem"
-        Me.KasirToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.KasirToolStripMenuItem.Text = "&Kasir"
-        '
-        'GudangToolStripMenuItem
-        '
-        Me.GudangToolStripMenuItem.Name = "GudangToolStripMenuItem"
-        Me.GudangToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.GudangToolStripMenuItem.Text = "&Gudang"
+        Me.tmr_login.Interval = 1000
         '
         'frmMain
         '
