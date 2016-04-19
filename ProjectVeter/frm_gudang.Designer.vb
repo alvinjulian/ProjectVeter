@@ -23,12 +23,12 @@ Partial Class frm_gudang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Txt3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Txt2 = New System.Windows.Forms.TextBox()
         Me.Txt1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Txt3 = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.btn1 = New System.Windows.Forms.Button()
         Me.btn2 = New System.Windows.Forms.Button()
@@ -39,18 +39,26 @@ Partial Class frm_gudang
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.Txt3)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Txt2)
         Me.GroupBox1.Controls.Add(Me.Txt1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 94)
+        Me.GroupBox1.Location = New System.Drawing.Point(30, 82)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(492, 190)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Barang"
+        '
+        'Txt3
+        '
+        Me.Txt3.Location = New System.Drawing.Point(155, 142)
+        Me.Txt3.Name = "Txt3"
+        Me.Txt3.Size = New System.Drawing.Size(318, 20)
+        Me.Txt3.TabIndex = 17
         '
         'Label4
         '
@@ -95,13 +103,6 @@ Partial Class frm_gudang
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nama Barang"
         '
-        'Txt3
-        '
-        Me.Txt3.Location = New System.Drawing.Point(155, 142)
-        Me.Txt3.Name = "Txt3"
-        Me.Txt3.Size = New System.Drawing.Size(318, 20)
-        Me.Txt3.TabIndex = 17
-        '
         'ListView1
         '
         Me.ListView1.Location = New System.Drawing.Point(30, 321)
@@ -112,7 +113,8 @@ Partial Class frm_gudang
         '
         'btn1
         '
-        Me.btn1.Location = New System.Drawing.Point(539, 165)
+        Me.btn1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn1.Location = New System.Drawing.Point(537, 213)
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(111, 59)
         Me.btn1.TabIndex = 20
@@ -121,7 +123,8 @@ Partial Class frm_gudang
         '
         'btn2
         '
-        Me.btn2.Location = New System.Drawing.Point(681, 168)
+        Me.btn2.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn2.Location = New System.Drawing.Point(654, 213)
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(75, 58)
         Me.btn2.TabIndex = 21
@@ -139,6 +142,7 @@ Partial Class frm_gudang
         '
         'Lbl1
         '
+        Me.Lbl1.BackColor = System.Drawing.Color.Transparent
         Me.Lbl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl1.Location = New System.Drawing.Point(172, 9)
         Me.Lbl1.Name = "Lbl1"

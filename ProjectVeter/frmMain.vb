@@ -7,6 +7,7 @@
 
         ' Add any initialization after the InitializeComponent() call.
         strp_login.Text = "Logged in as " + sTitle
+
     End Sub
 
     Private Sub frmMain_Load() Handles MyBase.Load

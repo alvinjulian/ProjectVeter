@@ -23,11 +23,22 @@ Public Class frm_Login
         Dim id As String
         If String.IsNullOrEmpty(txtUsername.Text) And String.IsNullOrEmpty(txtPassword.Text) Then
             MessageBox.Show("Username dan password tidak boleh kosong!", "Gagal Login", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            'ElseIf (txtUsername.Text.Trim.Length > 0 & txtPassword.Text.Trim.Length > 0) Then
+            'If txtUsername.Text = "admin" Then
+            MessageBox.Show(txtUsername.Text)
+            'If txtPassword.Text = "admin" Then
+            MessageBox.Show("Login berhasil!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+            'End If
+            'End If
+
         Else
             id = txtUsername.Text
             Dim Main As New frmMain(id)
             Main.Show()
             Me.Hide()
+            'MessageBox.Show("Username dan password salah", "Gagal Login", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
