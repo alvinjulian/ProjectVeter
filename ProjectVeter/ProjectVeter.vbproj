@@ -81,6 +81,12 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_Kasir.Designer.vb">
+      <DependentUpon>frm_Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Kasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Kasir.resx">
+      <DependentUpon>frm_Kasir.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.vb</DependentUpon>
     </EmbeddedResource>
