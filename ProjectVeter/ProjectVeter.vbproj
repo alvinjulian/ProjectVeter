@@ -13,7 +13,6 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -24,7 +23,6 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>ProjectVeter.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,7 +33,6 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>ProjectVeter.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -81,6 +78,12 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_gudang.Designer.vb">
+      <DependentUpon>frm_gudang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_gudang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_Kasir.Designer.vb">
       <DependentUpon>frm_Kasir.vb</DependentUpon>
     </Compile>
@@ -92,6 +95,12 @@
     </Compile>
     <Compile Include="frm_Login.Designer.vb">
       <DependentUpon>frm_Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_print_transaksi.Designer.vb">
+      <DependentUpon>frm_print_transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_print_transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -114,11 +123,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_gudang.resx">
+      <DependentUpon>frm_gudang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Kasir.resx">
       <DependentUpon>frm_Kasir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_print_transaksi.resx">
+      <DependentUpon>frm_print_transaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
