@@ -12,6 +12,9 @@
         strp_login.Text = "Logged in as " + sTitle
 
         Me.IsMdiContainer = True
+
+        Me.WindowState = FormWindowState.Maximized
+
     End Sub
 
     Private Sub frmMain_Load() Handles MyBase.Load
