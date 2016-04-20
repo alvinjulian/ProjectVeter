@@ -8,17 +8,6 @@ Public Class frm_Login
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.txtPassword.PasswordChar = "*"
-        Dim sukses_exit As Boolean
-        Do
-            sukses_exit = True
-            Try
-                For Each f As Form In My.Application.OpenForms
-                    If f.Name < "frm_Login" Then f.Close()
-                Next f
-            Catch ex As Exception
-                sukses_exit = False
-            End Try
-        Loop Until sukses_exit
     End Sub
 
     Public Sub loginDetails()

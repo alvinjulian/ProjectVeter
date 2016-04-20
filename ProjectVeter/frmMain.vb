@@ -1,5 +1,5 @@
 ﻿Public Class frmMain
-    Public Shared waktu As Integer = 90 'set waktu disini' 'untuk bisa diload ke form lain'
+    Public Shared waktu As Integer
 
     Public Shared buka As Boolean = False
 
@@ -15,9 +15,10 @@
     End Sub
 
     Private Sub frmMain_Load() Handles MyBase.Load
-        tlstriplbl_timer.Text = "01:30"
+        tlstriplbl_timer.Text = "00:00"
         tmr_login.Enabled = True
         tmr_login.Interval = 1000
+        waktu = 5 'set waktu disini' 'untuk bisa diload ke form lain'
         tmr_login.Start()
     End Sub
 
@@ -49,21 +50,9 @@
             tmr_login.Stop()
 
             'close all form'
-            Dim sukses_exit As Boolean
-            Do
-                sukses_exit = True
-                Try
-                    For Each f As Form In My.Application.OpenForms
-                        If f.Name < "frmMain" Then f.Close()
-                    Next f
-                Catch ex As Exception
-                    sukses_exit = False
-                End Try
-            Loop Until sukses_exit
 
             Dim frm_login As New frm_Login
             frm_login.Show()
-            waktu = 90
             Me.Close()
 
         End If
