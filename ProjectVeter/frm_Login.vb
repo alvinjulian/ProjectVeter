@@ -34,12 +34,12 @@ Public Class frm_Login
         Dim id As String
         If String.IsNullOrEmpty(txtUsername.Text) And String.IsNullOrEmpty(txtPassword.Text) Then
             MessageBox.Show("Username dan password tidak boleh kosong!", "Gagal Login", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+            Call clearTxt()
             'ElseIf (txtUsername.Text.Trim.Length > 0 & txtPassword.Text.Trim.Length > 0) Then
             'If txtUsername.Text = "admin" Then
-            MessageBox.Show(txtUsername.Text)
+            'MessageBox.Show(txtUsername.Text)
             'If txtPassword.Text = "admin" Then
-            MessageBox.Show("Login berhasil!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            'MessageBox.Show("Login berhasil!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
             'End If
             'End If
@@ -55,5 +55,11 @@ Public Class frm_Login
 
     Private Sub frm_Login_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
         Application.Exit()
+    End Sub
+
+    Private Sub clearTxt()
+        txtUsername.Text = ""
+        txtPassword.Text = ""
+        txtUsername.Focus()
     End Sub
 End Class
