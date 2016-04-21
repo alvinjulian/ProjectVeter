@@ -77,4 +77,8 @@
         txtNama.Enabled = status
         txtHarga.Enabled = status
     End Sub
+
+    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        Call clearTxt()
+    End Sub
 End Class
