@@ -7,14 +7,13 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        lstView1.GridLines = True
 
     End Sub
 
     Private Sub frm_gudang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'data.dt.Columns.Add("Barcode")
-        'data.dt.Columns.Add("Nama Barang")
-        'data.dt.Columns.Add("Harga")
+        ' _data.dt.Columns.Add("Barcode")
+        ' _data.dt.Columns.Add("Nama Barang")
+        ' _data.dt.Columns.Add("Harga")
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -22,21 +21,35 @@
         Dim nama As String
         Dim harga As Integer
 
-        Dim temp As String
-
-        temp = txtHarga.Text.ToString
-
         Dim result As Boolean = Integer.TryParse(txtHarga.Text.ToString.Trim, harga)
         If result Then
-            Dim dr As DataRow
-            dr = _data.dt.NewRow
-            dr("Barcode") = txtBarcode.Text.Trim
-            dr("Nama Barang") = txtNama.Text.Trim
-            dr("Harga") = harga
+            'Dim dr As DataRow
+            'dr = _data.dt.NewRow
+            'dr("Barcode") = txtBarcode.Text.Trim
+            'dr("Nama Barang") = txtNama.Text.Trim
+            'dr("Harga") = harga
+            '
+            '_data.dt.Rows.Add(dr)
+            '
+            'dgv.DataSource = _data.dt
+            'dgv.Refresh()
+            '
+            'Dim index As Integer = _data.arrdata.Length()
 
-            _data.dt.Rows.Add(dr)
+            Dim index_i As Integer = _data.arrdata.GetUpperBound(0)
+            'Dim index_j As Integer = _data.arrdata.GetUpperBound(1)
+            'Dim index_k As Integer = _data.arrdata.GetUpperBound(2)
 
-            dgv.DataSource = _data.dt
+            barcode = txtBarcode.Text.Trim
+            nama = txtNama.Text.Trim
+
+            _data.arrdata(0, index_i) = barcode.ToString.Trim
+            _data.arrdata(1, index_i) = nama.ToString.Trim
+            _data.arrdata(2, index_i) = result.ToString.Trim
+
+            'MessageBox.Show(index)
+
+            dgv.DataSource = _data.arrdata
             dgv.Refresh()
 
             MessageBox.Show("Data berhasil dimasukan!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -44,12 +57,6 @@
         Else
             MessageBox.Show("Harga Tidak Valid!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
-
-
-
-
-
-        barcode = txtBarcode.Text.Trim
 
         'Dim lv As ListViewItem
         'lv.Text = txtBarcode.Text.Trim
