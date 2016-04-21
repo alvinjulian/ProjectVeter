@@ -23,27 +23,32 @@ Partial Class frm_gudang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Txt3 = New System.Windows.Forms.TextBox()
+        Me.txtHarga = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Txt2 = New System.Windows.Forms.TextBox()
-        Me.Txt1 = New System.Windows.Forms.TextBox()
+        Me.txtNama = New System.Windows.Forms.TextBox()
+        Me.txtBarcode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.lstView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btn1 = New System.Windows.Forms.Button()
         Me.btn2 = New System.Windows.Forms.Button()
         Me.btn4 = New System.Windows.Forms.Button()
         Me.Lbl1 = New System.Windows.Forms.Label()
+        Me.dgv = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.Txt3)
+        Me.GroupBox1.Controls.Add(Me.txtHarga)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Txt2)
-        Me.GroupBox1.Controls.Add(Me.Txt1)
+        Me.GroupBox1.Controls.Add(Me.txtNama)
+        Me.GroupBox1.Controls.Add(Me.txtBarcode)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(30, 82)
@@ -53,12 +58,12 @@ Partial Class frm_gudang
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Barang"
         '
-        'Txt3
+        'txtHarga
         '
-        Me.Txt3.Location = New System.Drawing.Point(155, 142)
-        Me.Txt3.Name = "Txt3"
-        Me.Txt3.Size = New System.Drawing.Size(318, 20)
-        Me.Txt3.TabIndex = 17
+        Me.txtHarga.Location = New System.Drawing.Point(155, 142)
+        Me.txtHarga.Name = "txtHarga"
+        Me.txtHarga.Size = New System.Drawing.Size(318, 20)
+        Me.txtHarga.TabIndex = 17
         '
         'Label4
         '
@@ -69,21 +74,20 @@ Partial Class frm_gudang
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Harga"
         '
-        'Txt2
+        'txtNama
         '
-        Me.Txt2.Location = New System.Drawing.Point(155, 94)
-        Me.Txt2.Name = "Txt2"
-        Me.Txt2.Size = New System.Drawing.Size(318, 20)
-        Me.Txt2.TabIndex = 16
+        Me.txtNama.Location = New System.Drawing.Point(155, 94)
+        Me.txtNama.Name = "txtNama"
+        Me.txtNama.Size = New System.Drawing.Size(318, 20)
+        Me.txtNama.TabIndex = 16
         '
-        'Txt1
+        'txtBarcode
         '
-        Me.Txt1.AcceptsReturn = True
-        Me.Txt1.Enabled = False
-        Me.Txt1.Location = New System.Drawing.Point(155, 47)
-        Me.Txt1.Name = "Txt1"
-        Me.Txt1.Size = New System.Drawing.Size(318, 20)
-        Me.Txt1.TabIndex = 15
+        Me.txtBarcode.AcceptsReturn = True
+        Me.txtBarcode.Location = New System.Drawing.Point(155, 47)
+        Me.txtBarcode.Name = "txtBarcode"
+        Me.txtBarcode.Size = New System.Drawing.Size(318, 20)
+        Me.txtBarcode.TabIndex = 15
         '
         'Label2
         '
@@ -103,13 +107,28 @@ Partial Class frm_gudang
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nama Barang"
         '
-        'ListView1
+        'lstView1
         '
-        Me.ListView1.Location = New System.Drawing.Point(30, 321)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(726, 160)
-        Me.ListView1.TabIndex = 12
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.lstView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.lstView1.Location = New System.Drawing.Point(30, 321)
+        Me.lstView1.Name = "lstView1"
+        Me.lstView1.Size = New System.Drawing.Size(288, 160)
+        Me.lstView1.TabIndex = 12
+        Me.lstView1.UseCompatibleStateImageBehavior = False
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Barcode"
+        Me.ColumnHeader1.Width = 100
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Nama Barang"
+        Me.ColumnHeader2.Width = 180
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Harga"
         '
         'btn1
         '
@@ -151,35 +170,52 @@ Partial Class frm_gudang
         Me.Lbl1.Text = "Gudang Toko J"
         Me.Lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'dgv
+        '
+        Me.dgv.AllowUserToAddRows = False
+        Me.dgv.AllowUserToDeleteRows = False
+        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv.Location = New System.Drawing.Point(337, 321)
+        Me.dgv.Name = "dgv"
+        Me.dgv.ReadOnly = True
+        Me.dgv.Size = New System.Drawing.Size(430, 160)
+        Me.dgv.TabIndex = 25
+        '
         'frm_gudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(789, 568)
+        Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Lbl1)
         Me.Controls.Add(Me.btn4)
         Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.btn1)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.lstView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frm_gudang"
         Me.Text = "Gudang"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Txt3 As TextBox
+    Friend WithEvents txtHarga As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Txt2 As TextBox
-    Friend WithEvents Txt1 As TextBox
+    Friend WithEvents txtNama As TextBox
+    Friend WithEvents txtBarcode As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents lstView1 As ListView
     Friend WithEvents btn1 As Button
     Friend WithEvents btn2 As Button
     Friend WithEvents btn4 As Button
     Friend WithEvents Lbl1 As Label
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents dgv As DataGridView
 End Class
