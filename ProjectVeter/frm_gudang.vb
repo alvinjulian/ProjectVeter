@@ -1,5 +1,8 @@
 ﻿Public Class frm_gudang
-
+    'array public bisa diakses form mana pun,,'
+    Public Shared barcode(100) As String
+    Public Shared nama(100) As String
+    Public Shared harga_array(100) As String
 
     Public Sub New()
 
@@ -17,12 +20,22 @@
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
-        Dim barcode As String
-        Dim nama As String
-        Dim harga As Integer
 
+        Dim harga As Integer
+        Dim index As Integer
         Dim result As Boolean = Integer.TryParse(txtHarga.Text.ToString.Trim, harga)
         If result Then
+            Me.dgv.Rows.Add(txtBarcode.Text, txtNama.Text, harga)
+            index = Integer.Parse(txtBarcode.Text)
+
+            'masukin ke array untuk bisa di load di kasir nanti'
+            barcode(index) = txtBarcode.Text
+            nama(index) = txtNama.Text
+            harga_array(index) = txtHarga.Text
+            'naekin value barcode otomatis'
+            txtBarcode.Text = Val(txtBarcode.Text) + 1
+
+
             'Dim dr As DataRow
             'dr = _data.dt.NewRow
             'dr("Barcode") = txtBarcode.Text.Trim
@@ -36,21 +49,21 @@
             '
             'Dim index As Integer = _data.arrdata.Length()
 
-            Dim index_i As Integer = _data.arrdata.GetUpperBound(0)
-            'Dim index_j As Integer = _data.arrdata.GetUpperBound(1)
-            'Dim index_k As Integer = _data.arrdata.GetUpperBound(2)
+            'Dim index_i As Integer = _data.arrdata.GetUpperBound(0)
+            ''Dim index_j As Integer = _data.arrdata.GetUpperBound(1)
+            ''Dim index_k As Integer = _data.arrdata.GetUpperBound(2)
 
-            barcode = txtBarcode.Text.Trim
-            nama = txtNama.Text.Trim
+            'barcode = txtBarcode.Text.Trim
+            'nama = txtNama.Text.Trim
 
-            _data.arrdata(0, index_i) = barcode.ToString.Trim
-            _data.arrdata(1, index_i) = nama.ToString.Trim
-            _data.arrdata(2, index_i) = result.ToString.Trim
+            '_data.arrdata(0, index_i) = barcode.ToString.Trim
+            '_data.arrdata(1, index_i) = nama.ToString.Trim
+            '_data.arrdata(2, index_i) = result.ToString.Trim
 
-            'MessageBox.Show(index)
+            ''MessageBox.Show(index)
 
-            dgv.DataSource = _data.arrdata
-            dgv.Refresh()
+            'dgv.DataSource = _data.arrdata
+            'dgv.Refresh()
 
             MessageBox.Show("Data berhasil dimasukan!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call clearTxt()
@@ -67,7 +80,7 @@
     End Sub
 
     Private Sub clearTxt()
-        txtBarcode.Clear()
+
         txtNama.Clear()
         txtHarga.Clear()
     End Sub

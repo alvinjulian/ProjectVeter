@@ -38,6 +38,9 @@ Partial Class frm_gudang
         Me.btn4 = New System.Windows.Forms.Button()
         Me.Lbl1 = New System.Windows.Forms.Label()
         Me.dgv = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -86,8 +89,10 @@ Partial Class frm_gudang
         Me.txtBarcode.AcceptsReturn = True
         Me.txtBarcode.Location = New System.Drawing.Point(155, 47)
         Me.txtBarcode.Name = "txtBarcode"
+        Me.txtBarcode.ReadOnly = True
         Me.txtBarcode.Size = New System.Drawing.Size(318, 20)
         Me.txtBarcode.TabIndex = 15
+        Me.txtBarcode.Text = "1"
         '
         'Label2
         '
@@ -175,11 +180,31 @@ Partial Class frm_gudang
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(337, 321)
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        Me.dgv.Location = New System.Drawing.Point(347, 321)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        Me.dgv.Size = New System.Drawing.Size(430, 160)
+        Me.dgv.Size = New System.Drawing.Size(347, 160)
         Me.dgv.TabIndex = 25
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nama Barang"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Harga"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
         'frm_gudang
         '
@@ -218,4 +243,7 @@ Partial Class frm_gudang
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents dgv As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
 End Class
