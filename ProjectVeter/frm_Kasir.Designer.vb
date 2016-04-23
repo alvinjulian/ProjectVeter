@@ -153,6 +153,8 @@ Partial Class frm_Kasir
         '
         'cmbPay
         '
+        Me.cmbPay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cmbPay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbPay.FormattingEnabled = True
         Me.cmbPay.Items.AddRange(New Object() {"Cash", "Credit"})
         Me.cmbPay.Location = New System.Drawing.Point(115, 62)

@@ -21,7 +21,7 @@
         tlstriplbl_timer.Text = "00:00"
         tmr_login.Enabled = True
         tmr_login.Interval = 1000
-        waktu = 5 'set waktu disini' 'untuk bisa diload ke form lain'
+        waktu = 1000 'set waktu disini' 'untuk bisa diload ke form lain'
         tmr_login.Start()
     End Sub
 
@@ -72,13 +72,13 @@
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
-        'buka = True
-        'If (buka = True) Then
-        Dim frmLogin = New frm_Login
-        '  buka = False
-        frmLogin.Show()
-        Me.Close()
+        '
+        ''buka = True
+        ''If (buka = True) Then
+        'Dim frmLogin = New frm_Login
+        ''  buka = False
+        'frmLogin.Show()
+        'Me.Close()
         '    frmLogin = Nothing
         '    Me.Close()
         'End If
