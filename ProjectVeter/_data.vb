@@ -1,5 +1,5 @@
 ﻿Public Class _data
-    Public Shared dt As DataTable
-    Public Shared bs As BindingSource
-    Public Shared arrdata(3, 100) As String
+    Public Shared barcode(100) As String
+    Public Shared nama(100) As String
+    Public Shared harga_array(100) As String
 End Class

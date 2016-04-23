@@ -1,8 +1,6 @@
 ﻿Public Class frm_gudang
     'array public bisa diakses form mana pun,,'
-    Public Shared barcode(100) As String
-    Public Shared nama(100) As String
-    Public Shared harga_array(100) As String
+
 
     Public Sub New()
 
@@ -14,9 +12,7 @@
     End Sub
 
     Private Sub frm_gudang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' _data.dt.Columns.Add("Barcode")
-        ' _data.dt.Columns.Add("Nama Barang")
-        ' _data.dt.Columns.Add("Harga")
+
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -29,9 +25,9 @@
             index = Integer.Parse(txtBarcode.Text)
 
             'masukin ke array untuk bisa di load di kasir nanti'
-            barcode(index) = txtBarcode.Text
-            nama(index) = txtNama.Text
-            harga_array(index) = txtHarga.Text
+            _data.barcode(index) = txtBarcode.Text
+            _data.nama(index) = txtNama.Text
+            _data.harga_array(index) = txtHarga.Text
             'naekin value barcode otomatis'
             txtBarcode.Text = Val(txtBarcode.Text) + 1
 

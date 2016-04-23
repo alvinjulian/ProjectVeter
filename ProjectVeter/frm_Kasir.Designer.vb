@@ -244,6 +244,7 @@ Partial Class frm_Kasir
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frm_Kasir"
         Me.Text = "Kasir"
         Me.GroupBox1.ResumeLayout(False)

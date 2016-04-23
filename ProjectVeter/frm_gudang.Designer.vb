@@ -29,10 +29,6 @@ Partial Class frm_gudang
         Me.txtBarcode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lstView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btn1 = New System.Windows.Forms.Button()
         Me.btn2 = New System.Windows.Forms.Button()
         Me.btn4 = New System.Windows.Forms.Button()
@@ -112,33 +108,10 @@ Partial Class frm_gudang
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nama Barang"
         '
-        'lstView1
-        '
-        Me.lstView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
-        Me.lstView1.Location = New System.Drawing.Point(30, 321)
-        Me.lstView1.Name = "lstView1"
-        Me.lstView1.Size = New System.Drawing.Size(288, 160)
-        Me.lstView1.TabIndex = 12
-        Me.lstView1.UseCompatibleStateImageBehavior = False
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Barcode"
-        Me.ColumnHeader1.Width = 100
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Nama Barang"
-        Me.ColumnHeader2.Width = 180
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Harga"
-        '
         'btn1
         '
         Me.btn1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btn1.Location = New System.Drawing.Point(537, 213)
+        Me.btn1.Location = New System.Drawing.Point(543, 129)
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(111, 59)
         Me.btn1.TabIndex = 20
@@ -148,7 +121,7 @@ Partial Class frm_gudang
         'btn2
         '
         Me.btn2.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btn2.Location = New System.Drawing.Point(654, 213)
+        Me.btn2.Location = New System.Drawing.Point(562, 204)
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(75, 58)
         Me.btn2.TabIndex = 21
@@ -157,7 +130,7 @@ Partial Class frm_gudang
         '
         'btn4
         '
-        Me.btn4.Location = New System.Drawing.Point(30, 487)
+        Me.btn4.Location = New System.Drawing.Point(30, 474)
         Me.btn4.Name = "btn4"
         Me.btn4.Size = New System.Drawing.Size(75, 58)
         Me.btn4.TabIndex = 22
@@ -181,10 +154,12 @@ Partial Class frm_gudang
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
-        Me.dgv.Location = New System.Drawing.Point(347, 321)
+        Me.dgv.Location = New System.Drawing.Point(30, 295)
+        Me.dgv.MultiSelect = False
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        Me.dgv.Size = New System.Drawing.Size(347, 160)
+        Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv.Size = New System.Drawing.Size(664, 160)
         Me.dgv.TabIndex = 25
         '
         'Column1
@@ -192,6 +167,7 @@ Partial Class frm_gudang
         Me.Column1.HeaderText = "ID"
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
+        Me.Column1.Width = 150
         '
         'Column2
         '
@@ -199,6 +175,7 @@ Partial Class frm_gudang
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
         Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column2.Width = 250
         '
         'Column3
         '
@@ -210,13 +187,12 @@ Partial Class frm_gudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(789, 568)
+        Me.ClientSize = New System.Drawing.Size(706, 554)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Lbl1)
         Me.Controls.Add(Me.btn4)
         Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.btn1)
-        Me.Controls.Add(Me.lstView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frm_gudang"
         Me.Text = "Gudang"
@@ -234,14 +210,10 @@ Partial Class frm_gudang
     Friend WithEvents txtBarcode As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents lstView1 As ListView
     Friend WithEvents btn1 As Button
     Friend WithEvents btn2 As Button
     Friend WithEvents btn4 As Button
     Friend WithEvents Lbl1 As Label
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents dgv As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn

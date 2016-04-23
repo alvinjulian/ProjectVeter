@@ -19,6 +19,15 @@
     End Sub
 
     Private Sub cmbBarcode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbBarcode.SelectedIndexChanged
+        Dim index As Integer = cmbBarcode.SelectedIndex
 
+    End Sub
+
+    Private Sub frm_Kasir_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cmbBarcode.MaxDropDownItems = _data.barcode.Length
+        cmbBarcode.Items.Clear()
+        For Each dtaBar As String In _data.barcode
+            cmbBarcode.Items.Add(dtaBar)
+        Next
     End Sub
 End Class

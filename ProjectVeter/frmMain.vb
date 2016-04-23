@@ -72,16 +72,22 @@
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Me.Hide()
+
         'buka = True
         'If (buka = True) Then
         Dim frmLogin = New frm_Login
         '  buka = False
         frmLogin.Show()
-
+        Me.Close()
         '    frmLogin = Nothing
         '    Me.Close()
         'End If
         'Application.Run(New frm_Login)
+    End Sub
+
+    Private Sub GudangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GudangToolStripMenuItem.Click
+        Dim frm_Gudang As New frm_gudang
+        frm_Gudang.MdiParent = Me
+        frm_Gudang.Show()
     End Sub
 End Class
