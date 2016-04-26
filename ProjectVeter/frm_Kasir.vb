@@ -1,9 +1,36 @@
 ﻿Public Class frm_Kasir
     Private Sub frm_Kasir_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Me.Close()
+        'Me.Close()
     End Sub
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
+        Dim barcode As String
+        Dim nama As String
+        Dim jumlah As Integer
+        Dim harga As Integer
+
+        barcode = cmbBarcode.Text.ToString.Trim
+        nama = txtNama.Text.ToString.Trim
+        Dim result As Boolean = Integer.TryParse(txtJumlah.Text.ToString.Trim, jumlah)
+        If result Then
+            result = Integer.TryParse(txtHarga.Text.ToString.Trim, harga)
+            If result Then
+                Dim index As Integer = _data.penjualan.GetUpperBound(1)
+                _data.penjualan(0, index) = barcode.ToString.Trim
+                _data.penjualan(1, index) = nama.ToString.Trim
+                _data.penjualan(2, index) = jumlah.ToString.Trim
+                _data.penjualan(3, index) = harga.ToString.Trim
+
+                _data.subtotal = jumlah * harga
+
+                _data.total += _data.subtotal
+
+                Me.dgv.Rows.Add(barcode.ToString.Trim, nama.ToString.Trim, jumlah.ToString.Trim, harga.ToString.Trim)
+                MessageBox.Show("Data berhasil diinput!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Else
+
+        End If
 
     End Sub
 
@@ -14,7 +41,7 @@
         txtJumlah.Clear()
     End Sub
 
-    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -53,5 +80,8 @@
     Private Sub Btn4_Click(sender As Object, e As EventArgs) Handles Btn4.Click
         _data.cstId = txtCustomer.Text.ToString.Trim
         _data.pmbyran = cmbPay.Text.ToString.Trim
+        Dim detail As New frm_print_transaksi
+        detail.Show()
+        Me.Close()
     End Sub
 End Class

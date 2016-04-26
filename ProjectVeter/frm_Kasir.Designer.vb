@@ -22,7 +22,6 @@ Partial Class frm_Kasir
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtJumlah = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -39,20 +38,17 @@ Partial Class frm_Kasir
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.btnHapus = New System.Windows.Forms.Button()
         Me.Btn4 = New System.Windows.Forms.Button()
         Me.Lbl1 = New System.Windows.Forms.Label()
+        Me.dgv = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(33, 329)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(726, 160)
-        Me.ListView1.TabIndex = 8
-        Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'GroupBox1
         '
@@ -205,18 +201,9 @@ Partial Class frm_Kasir
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
-        'btnHapus
-        '
-        Me.btnHapus.Location = New System.Drawing.Point(204, 289)
-        Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(415, 25)
-        Me.btnHapus.TabIndex = 21
-        Me.btnHapus.Text = "Hapus Barang"
-        Me.btnHapus.UseVisualStyleBackColor = True
-        '
         'Btn4
         '
-        Me.Btn4.Location = New System.Drawing.Point(580, 502)
+        Me.Btn4.Location = New System.Drawing.Point(580, 448)
         Me.Btn4.Name = "Btn4"
         Me.Btn4.Size = New System.Drawing.Size(179, 39)
         Me.Btn4.TabIndex = 22
@@ -233,18 +220,54 @@ Partial Class frm_Kasir
         Me.Lbl1.Text = "Transaksi Toko J"
         Me.Lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'dgv
+        '
+        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        Me.dgv.Location = New System.Drawing.Point(28, 292)
+        Me.dgv.Name = "dgv"
+        Me.dgv.ReadOnly = True
+        Me.dgv.Size = New System.Drawing.Size(731, 150)
+        Me.dgv.TabIndex = 24
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Barcode"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nama Barang"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 200
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Jumlah Barang"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 150
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Harga Satuan"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 150
+        '
         'frm_Kasir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(775, 557)
+        Me.ClientSize = New System.Drawing.Size(775, 506)
+        Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Lbl1)
         Me.Controls.Add(Me.Btn4)
-        Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frm_Kasir"
@@ -253,10 +276,10 @@ Partial Class frm_Kasir
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtJumlah As TextBox
     Friend WithEvents Label5 As Label
@@ -273,7 +296,11 @@ Partial Class frm_Kasir
     Friend WithEvents Label8 As Label
     Friend WithEvents btnTambah As Button
     Friend WithEvents btnClear As Button
-    Friend WithEvents btnHapus As Button
     Friend WithEvents Btn4 As Button
     Friend WithEvents Lbl1 As Label
+    Friend WithEvents dgv As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

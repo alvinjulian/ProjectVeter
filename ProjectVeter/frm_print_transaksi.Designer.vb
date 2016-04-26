@@ -30,6 +30,10 @@ Partial Class frm_print_transaksi
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPay = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,6 +69,7 @@ Partial Class frm_print_transaksi
         'dgv
         '
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.dgv.Location = New System.Drawing.Point(25, 88)
         Me.dgv.Name = "dgv"
         Me.dgv.Size = New System.Drawing.Size(576, 301)
@@ -110,6 +115,26 @@ Partial Class frm_print_transaksi
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Pembayaran : "
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Barcode"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nama Barang"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Jumlah Barang"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Harga Satuan"
+        Me.Column4.Name = "Column4"
+        '
         'frm_print_transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -139,4 +164,8 @@ Partial Class frm_print_transaksi
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPay As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

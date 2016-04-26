@@ -90,4 +90,8 @@
     Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
         Call clearTxt()
     End Sub
+
+    Private Sub dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellContentClick
+
+    End Sub
 End Class
