@@ -31,47 +31,11 @@
             'naekin value barcode otomatis'
             txtBarcode.Text = Val(txtBarcode.Text) + 1
 
-
-            'Dim dr As DataRow
-            'dr = _data.dt.NewRow
-            'dr("Barcode") = txtBarcode.Text.Trim
-            'dr("Nama Barang") = txtNama.Text.Trim
-            'dr("Harga") = harga
-            '
-            '_data.dt.Rows.Add(dr)
-            '
-            'dgv.DataSource = _data.dt
-            'dgv.Refresh()
-            '
-            'Dim index As Integer = _data.arrdata.Length()
-
-            'Dim index_i As Integer = _data.arrdata.GetUpperBound(0)
-            ''Dim index_j As Integer = _data.arrdata.GetUpperBound(1)
-            ''Dim index_k As Integer = _data.arrdata.GetUpperBound(2)
-
-            'barcode = txtBarcode.Text.Trim
-            'nama = txtNama.Text.Trim
-
-            '_data.arrdata(0, index_i) = barcode.ToString.Trim
-            '_data.arrdata(1, index_i) = nama.ToString.Trim
-            '_data.arrdata(2, index_i) = result.ToString.Trim
-
-            ''MessageBox.Show(index)
-
-            'dgv.DataSource = _data.arrdata
-            'dgv.Refresh()
-
             MessageBox.Show("Data berhasil dimasukan!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call clearTxt()
         Else
             MessageBox.Show("Harga Tidak Valid!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
-
-        'Dim lv As ListViewItem
-        'lv.Text = txtBarcode.Text.Trim
-        'lv.Items.AddRange(New ListViewItem(New String() {txtBarcode.Text.Trim, txtNama.Text.Trim, txtHarga.Text.Trim}))
-        'lstView1.Items.Add(New ListViewItem(New String() {txtBarcode.Text.Trim, txtNama.Text.Trim, txtHarga.Text.Trim}))
-
 
     End Sub
 

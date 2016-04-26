@@ -21,7 +21,7 @@
         tlstriplbl_timer.Text = "00:00"
         tmr_login.Enabled = True
         tmr_login.Interval = 1000
-        waktu = 1000 'set waktu disini' 'untuk bisa diload ke form lain'
+        waktu = 90 'set waktu disini' 'untuk bisa diload ke form lain'
         tmr_login.Start()
     End Sub
 

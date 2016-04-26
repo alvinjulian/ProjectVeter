@@ -115,12 +115,6 @@
       <DependentUpon>frm_Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_print_transaksi.Designer.vb">
-      <DependentUpon>frm_print_transaksi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_print_transaksi.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -150,9 +144,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_print_transaksi.resx">
-      <DependentUpon>frm_print_transaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

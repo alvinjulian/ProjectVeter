@@ -15,15 +15,10 @@
         If result Then
             result = Integer.TryParse(txtHarga.Text.ToString.Trim, harga)
             If result Then
-                Dim index As Integer = _data.penjualan.GetUpperBound(0)
-                _data.penjualan(index, 0) = barcode.ToString.Trim
-                _data.penjualan(index, 1) = nama.ToString.Trim
-                _data.penjualan(index, 2) = jumlah.ToString.Trim
-                _data.penjualan(index, 3) = harga.ToString.Trim
-
                 _data.subtotal = jumlah * harga
 
                 _data.total += _data.subtotal
+
 
                 Me.dgv.Rows.Add(barcode.ToString.Trim, nama.ToString.Trim, jumlah.ToString.Trim, harga.ToString.Trim)
                 MessageBox.Show("Data berhasil diinput!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -77,16 +72,11 @@
 
     End Sub
 
-    Private Sub Btn4_Click(sender As Object, e As EventArgs)
-        _data.cstId = txtCustomer.Text.ToString.Trim
-        _data.pmbyran = cmbPay.Text.ToString.Trim
-        Dim detail As New frm_print_transaksi
-        detail.Show()
-        Me.Close()
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show("Customer ID : " + _data.cstId.ToString.Trim + "\n" + "Pembayaran : " + _data.pmbyran.ToString.Trim + "Total belanja anda : " + "Rp. " + _data.total.ToString.Trim + "\n", "Bayar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        _data.cstId = txtCustomer.Text.ToString.Trim
+        _data.pmbyran = cmbPay.Text.ToString.Trim
+        MessageBox.Show("Customer ID : " + _data.cstId + vbNewLine + "Pembayaran : " + _data.pmbyran + vbNewLine + "Total belanja anda : " + "Rp. " + _data.total.ToString + vbNewLine, "Bayar", MessageBoxButtons.OK, MessageBoxIcon.Information)
         MessageBox.Show("Periksa kembali kembalian anda!", "Transaksi Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class
