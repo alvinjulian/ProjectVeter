@@ -22,65 +22,121 @@ Partial Class frm_print_transaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.label1 = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.btnSelesai = New System.Windows.Forms.Button()
+        Me.dgv = New System.Windows.Forms.DataGridView()
+        Me.lblIDCust = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblPay = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ListView1
+        'label1
         '
-        Me.ListView1.Location = New System.Drawing.Point(23, 38)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(399, 241)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.label1.AutoSize = True
+        Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label1.Location = New System.Drawing.Point(295, 433)
+        Me.label1.Name = "label1"
+        Me.label1.Size = New System.Drawing.Size(56, 20)
+        Me.label1.TabIndex = 1
+        Me.label1.Text = "Total : "
         '
-        'Label1
+        'lblTotal
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(20, 308)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Total : "
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(357, 433)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(83, 20)
+        Me.lblTotal.TabIndex = 2
+        Me.lblTotal.Text = "Rp. 00000"
         '
-        'Label2
+        'btnSelesai
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(66, 308)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Rp. 00000"
+        Me.btnSelesai.Location = New System.Drawing.Point(473, 425)
+        Me.btnSelesai.Name = "btnSelesai"
+        Me.btnSelesai.Size = New System.Drawing.Size(115, 38)
+        Me.btnSelesai.TabIndex = 3
+        Me.btnSelesai.Text = "Selesai Transaksi"
+        Me.btnSelesai.UseVisualStyleBackColor = True
         '
-        'Button1
+        'dgv
         '
-        Me.Button1.Location = New System.Drawing.Point(319, 342)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 38)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Selesai Transaksi"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv.Location = New System.Drawing.Point(25, 88)
+        Me.dgv.Name = "dgv"
+        Me.dgv.Size = New System.Drawing.Size(576, 301)
+        Me.dgv.TabIndex = 4
+        '
+        'lblIDCust
+        '
+        Me.lblIDCust.AutoSize = True
+        Me.lblIDCust.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIDCust.Location = New System.Drawing.Point(143, 33)
+        Me.lblIDCust.Name = "lblIDCust"
+        Me.lblIDCust.Size = New System.Drawing.Size(44, 20)
+        Me.lblIDCust.TabIndex = 6
+        Me.lblIDCust.Text = "xxxxx"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(26, 33)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(111, 20)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "ID Customer : "
+        '
+        'lblPay
+        '
+        Me.lblPay.AutoSize = True
+        Me.lblPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPay.Location = New System.Drawing.Point(546, 33)
+        Me.lblPay.Name = "lblPay"
+        Me.lblPay.Size = New System.Drawing.Size(46, 20)
+        Me.lblPay.TabIndex = 8
+        Me.lblPay.Text = "Cash"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(407, 33)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(110, 20)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Pembayaran : "
         '
         'frm_print_transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(446, 392)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListView1)
+        Me.ClientSize = New System.Drawing.Size(625, 491)
+        Me.Controls.Add(Me.lblPay)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblIDCust)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.dgv)
+        Me.Controls.Add(Me.btnSelesai)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frm_print_transaksi"
         Me.Text = "Struk Transaksi"
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents label1 As Label
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents btnSelesai As Button
+    Friend WithEvents dgv As DataGridView
+    Friend WithEvents lblIDCust As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblPay As Label
+    Friend WithEvents Label4 As Label
 End Class

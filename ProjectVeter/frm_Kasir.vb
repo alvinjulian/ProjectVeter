@@ -43,4 +43,9 @@
         End If
 
     End Sub
+
+    Private Sub Btn4_Click(sender As Object, e As EventArgs) Handles Btn4.Click
+        _data.cstId = txtCustomer.Text.ToString.Trim
+        _data.pmbyran = cmbPay.Text.ToString.Trim
+    End Sub
 End Class
