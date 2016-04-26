@@ -38,13 +38,13 @@ Partial Class frm_Kasir
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.Btn4 = New System.Windows.Forms.Button()
         Me.Lbl1 = New System.Windows.Forms.Label()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,21 +201,12 @@ Partial Class frm_Kasir
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
-        'Btn4
-        '
-        Me.Btn4.Location = New System.Drawing.Point(580, 448)
-        Me.Btn4.Name = "Btn4"
-        Me.Btn4.Size = New System.Drawing.Size(179, 39)
-        Me.Btn4.TabIndex = 22
-        Me.Btn4.Text = "Print Transaksi"
-        Me.Btn4.UseVisualStyleBackColor = True
-        '
         'Lbl1
         '
         Me.Lbl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl1.Location = New System.Drawing.Point(294, 18)
         Me.Lbl1.Name = "Lbl1"
-        Me.Lbl1.Size = New System.Drawing.Size(465, 123)
+        Me.Lbl1.Size = New System.Drawing.Size(465, 66)
         Me.Lbl1.TabIndex = 23
         Me.Lbl1.Text = "Transaksi Toko J"
         Me.Lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -257,14 +248,23 @@ Partial Class frm_Kasir
         Me.Column4.ReadOnly = True
         Me.Column4.Width = 150
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(568, 449)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(191, 45)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Simpan Transaksi"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frm_Kasir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 506)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Lbl1)
-        Me.Controls.Add(Me.Btn4)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.GroupBox2)
@@ -296,11 +296,11 @@ Partial Class frm_Kasir
     Friend WithEvents Label8 As Label
     Friend WithEvents btnTambah As Button
     Friend WithEvents btnClear As Button
-    Friend WithEvents Btn4 As Button
     Friend WithEvents Lbl1 As Label
     Friend WithEvents dgv As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

@@ -4,13 +4,13 @@
         lblPay.Text = _data.pmbyran.Trim
         lblTotal.Text = _data.total.ToString.Trim
 
-        Dim index As Integer = _data.penjualan.GetUpperBound(1)
+        Dim index As Integer = _data.penjualan.GetUpperBound(0)
 
-        For value As Integer = 0 To index
-            If String.IsNullOrEmpty(_data.penjualan(0, value)) Then
+        For value As Integer = 0 To index + 1
+            If String.IsNullOrEmpty(_data.penjualan(value, 0)) Then
 
             Else
-                Me.dgv.Rows.Add(_data.penjualan(0, value), _data.penjualan(1, value), _data.penjualan(2, value), _data.penjualan(3, value))
+                Me.dgv.Rows.Add(_data.penjualan(value, 0), _data.penjualan(value, 1), _data.penjualan(value, 2), _data.penjualan(value, 3))
             End If
         Next
 
